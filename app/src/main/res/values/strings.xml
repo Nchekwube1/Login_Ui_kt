@@ -3,4 +3,8 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="onboarding_image">onboarding image</string>
+    <string name="discover_your">Discover your</string>
+    <string name="dream_job_here">Dream Job Here</string>
+    <string name="explore_all_the_most_exciting_job_roles">Explore all the most exciting job roles</string>
+    <string name="based_on_your_interest_and_study_major">based on your interest and study major</string>
 </resources>
