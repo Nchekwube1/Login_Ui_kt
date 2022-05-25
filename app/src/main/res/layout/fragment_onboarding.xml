@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="@color/bgColor"
     android:padding="8dp"
     tools:context=".OnboardingFragment">
 
@@ -19,7 +20,8 @@
             android:id="@+id/cl_top"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:backgroundTint="@color/bgColor">
 
             <androidx.cardview.widget.CardView
                 android:layout_width="0dp"
@@ -50,11 +52,14 @@
             android:id="@+id/cl_bottom"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:backgroundTint="@color/bgColor">
 
             <LinearLayout
+                android:id="@+id/linearLayout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:backgroundTint="@color/bgColor"
                 android:orientation="vertical"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -69,16 +74,18 @@
                     android:fontFamily="@font/poppins_bold"
                     android:gravity="center"
                     android:text="@string/discover_your"
+                    android:textColor="@color/black"
                     android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/textView2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="4dp"
                     android:fontFamily="@font/poppins_bold"
                     android:gravity="center"
                     android:text="@string/dream_job_here"
+                    android:textColor="@color/black"
                     android:textSize="24sp" />
 
                 <TextView
@@ -89,7 +96,7 @@
                     android:fontFamily="@font/poppins_medium"
                     android:gravity="center"
                     android:text="@string/explore_all_the_most_exciting_job_roles"
-                    android:textSize="18sp" />
+                    android:textSize="15sp" />
 
                 <TextView
                     android:id="@+id/textView4"
@@ -99,8 +106,64 @@
                     android:fontFamily="@font/poppins_medium"
                     android:gravity="center"
                     android:text="@string/based_on_your_interest_and_study_major"
-                    android:textSize="18sp" />
+                    android:textSize="15sp" />
+
             </LinearLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="24dp"
+                android:paddingStart="2dp"
+                android:paddingEnd="2dp"
+                app:cardBackgroundColor="@color/purpleBg"
+                app:cardCornerRadius="12dp"
+                app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:strokeColor="@color/purpleBg"
+                app:strokeWidth="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/purpleBg"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn_register"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="2dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/purpleBg"
+                        android:fontFamily="@font/poppins_medium"
+                        android:minWidth="0dp"
+                        android:minHeight="0dp"
+                        android:stateListAnimator="@null"
+                        android:text="@string/register"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black" />
+
+                    <Button
+                        android:id="@+id/btn_login"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="2dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/white"
+                        android:fontFamily="@font/poppins_medium"
+                        android:minWidth="0dp"
+                        android:minHeight="0dp"
+                        android:stateListAnimator="@null"
+                        android:text="@string/sign_in"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
 </FrameLayout>
